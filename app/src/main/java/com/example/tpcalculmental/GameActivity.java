@@ -72,6 +72,7 @@ public class GameActivity extends AppCompatActivity {
             }
             if (nombreVie == 0) {
                 Intent intent = new Intent(this, EnregistrementActivity.class);
+                intent.putExtra("score", score);
                 startActivity(intent);
             }
         });
