@@ -1,9 +1,12 @@
 package com.example.tpcalculmental;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -20,7 +23,13 @@ public class GameActivity extends AppCompatActivity {
 
     private TextView textView_calcul;
     private TextInputEditText input_resultat;
+    private Button bouton_envoyer;
     private int currentResult;
+    private int score = 0;
+
+    private int nombreVie = 5;
+
+    private Menu menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +44,44 @@ public class GameActivity extends AppCompatActivity {
 
         textView_calcul = findViewById(R.id.textView_calcul);
         input_resultat = findViewById(R.id.input_resultat);
+        bouton_envoyer = findViewById(R.id.bouton_envoyer);
+
+        bouton_envoyer.setOnClickListener(view->{
+            String donneeInserer = input_resultat.getText().toString();
+            int resultat = Integer.parseInt(donneeInserer);
+
+            if (resultat == currentResult) {
+                score++;
+                if (menu != null) {
+                    MenuItem textscore = menu.findItem(R.id.text_score);
+                    textscore.setTitle("Score: " + score);
+                }
+                Object[] calculationAndResult = generateRandomCalculation();
+                textView_calcul.setText((String) calculationAndResult[0]);
+                currentResult = (int) calculationAndResult[1];
+
+            }else{
+                if (menu != null) {
+                    MenuItem nombrevie = menu.findItem(R.id.nombre_vie);
+                    nombrevie.setTitle("Vie: " + --nombreVie);
+                }
+
+                Object[] calculationAndResult = generateRandomCalculation();
+                textView_calcul.setText((String) calculationAndResult[0]);
+                currentResult = (int) calculationAndResult[1];
+            }
+            if (nombreVie == 0) {
+                Intent intent = new Intent(this, EnregistrementActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Object[] calculationAndResult = generateRandomCalculation();
         textView_calcul.setText((String) calculationAndResult[0]);
         currentResult = (int) calculationAndResult[1];
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -46,6 +89,11 @@ public class GameActivity extends AppCompatActivity {
         inflater.inflate(R.menu.menu_game, menu);
         MenuItem textscore = menu.findItem(R.id.text_score);
         MenuItem nombrevie = menu.findItem(R.id.nombre_vie);
+
+        textscore.setTitle("Score: 0");
+        nombrevie.setTitle("Vie: 5");
+
+        this.menu = menu;
         return super.onCreateOptionsMenu(menu);
     }
 
