@@ -9,5 +9,6 @@
     <item
         android:id="@+id/nombre_vie"
         android:title="@string/text_nombre_vie"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+        />
 </menu>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TPCalculMental</string>
+    <string name="app_name">Let that think In</string>
     <string name="text_btn_jouer">Jouer</string>
     <string name="text_btn_scores">Scores</string>
     <string name="text_btn_apropos">À Propos</string>
@@ -9,5 +9,7 @@
     <string name="text_envoyer">Envoyer</string>
     <string name="text_pseudo">Votre pseudonyme</string>
     <string name="text_apropos">A PROPOS</string>
+    <string name="text_perdu">Vous avez Perdu !</string>
+    <string name="text_enregistrement">Veuillez vous enregistrer : </string>
     <string name="text_apropos_title">Créé par :</string>
 </resources>

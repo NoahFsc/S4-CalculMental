@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -56,6 +57,8 @@ public class GameActivity extends AppCompatActivity {
                     MenuItem textscore = menu.findItem(R.id.text_score);
                     textscore.setTitle("Score: " + score);
                 }
+                Toast.makeText(this, "Correct", Toast.LENGTH_SHORT).show();
+
                 Object[] calculationAndResult = generateRandomCalculation();
                 textView_calcul.setText((String) calculationAndResult[0]);
                 currentResult = (int) calculationAndResult[1];
@@ -64,12 +67,19 @@ public class GameActivity extends AppCompatActivity {
                 if (menu != null) {
                     MenuItem nombrevie = menu.findItem(R.id.nombre_vie);
                     nombrevie.setTitle("Vie: " + --nombreVie);
+
                 }
+                Toast.makeText(this, "Incorrect", Toast.LENGTH_SHORT).show();
 
                 Object[] calculationAndResult = generateRandomCalculation();
                 textView_calcul.setText((String) calculationAndResult[0]);
                 currentResult = (int) calculationAndResult[1];
             }
+
+            if (nombreVie == 1) {
+                Toast.makeText(this, "Attention il ne vous reste qu'une vie", Toast.LENGTH_SHORT).show();
+            }
+
             if (nombreVie == 0) {
                 Intent intent = new Intent(this, EnregistrementActivity.class);
                 intent.putExtra("score", score);

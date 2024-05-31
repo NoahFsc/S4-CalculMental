@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TPCalculoMental</string>
+    <string name="app_name">Let that think In</string>
     <string name="text_btn_jouer">Jugar</string>
     <string name="text_btn_scores">Punctuaciones</string>
     <string name="text_score">Puntaje</string>
@@ -10,5 +10,7 @@
     <string name="text_pseudo">Tu seudonimo</string>
     <string name="text_btn_apropos">A Proposito</string>
     <string name="text_apropos">A PROPOSITO</string>
+    <string name="text_perdu">Perdiste</string>
+    <string name="text_enregistrement">Hasta pronto, ahorra : </string>
     <string name="text_apropos_title">Creado por :</string>
 </resources>

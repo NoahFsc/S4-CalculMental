@@ -20,31 +20,42 @@
             android:id="@+id/textView_apropos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/text_apropos" />
+            android:text="@string/text_apropos"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"/>
 
         <TextView
             android:id="@+id/textView_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="@string/text_apropos_title" />
 
         <TextView
             android:id="@+id/textView_user1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sara Terrier" />
+            android:text="Sara Terrier"
+            android:layout_gravity="center"
+            android:gravity="center"/>
 
         <TextView
             android:id="@+id/textView_user2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Noah Faisca" />
+            android:text="Noah Faisca"
+            android:layout_gravity="center"
+            android:gravity="center"/>
 
         <TextView
             android:id="@+id/textView_user3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mathéo Stevance" />
+            android:text="Mathéo Stevance"
+            android:layout_gravity="center"
+            android:gravity="center"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

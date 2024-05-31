@@ -20,23 +20,33 @@
             android:id="@+id/textView_calcul"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_resultat"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/text_reponse" />
+                android:hint="@string/text_reponse"
+                android:layout_gravity="center"
+                android:gravity="center"/>
 
             <Button
                 android:id="@+id/bouton_envoyer"
-                android:layout_width="match_parent"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="@string/text_envoyer" />
+                android:text="@string/text_envoyer"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"/>
         </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
