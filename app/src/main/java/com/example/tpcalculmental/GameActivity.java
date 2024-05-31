@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,7 +24,7 @@ public class GameActivity extends AppCompatActivity {
     private TextView textView_calcul;
     private TextInputEditText input_resultat;
     private Button bouton_envoyer;
-    private int currentResult;
+    private float currentResult;
     private int score = 0;
 
     private int nombreVie = 5;
@@ -49,7 +48,7 @@ public class GameActivity extends AppCompatActivity {
 
         bouton_envoyer.setOnClickListener(view->{
             String donneeInserer = input_resultat.getText().toString();
-            int resultat = Integer.parseInt(donneeInserer);
+            float resultat = Float.parseFloat(donneeInserer);
 
             if (resultat == currentResult) {
                 score++;
@@ -58,10 +57,12 @@ public class GameActivity extends AppCompatActivity {
                     textscore.setTitle("Score: " + score);
                 }
                 Toast.makeText(this, "Correct", Toast.LENGTH_SHORT).show();
+                input_resultat.setText("");
 
                 Object[] calculationAndResult = generateRandomCalculation();
                 textView_calcul.setText((String) calculationAndResult[0]);
-                currentResult = (int) calculationAndResult[1];
+                currentResult = (float) calculationAndResult[1];
+
 
             }else{
                 if (menu != null) {
@@ -70,10 +71,13 @@ public class GameActivity extends AppCompatActivity {
 
                 }
                 Toast.makeText(this, "Incorrect", Toast.LENGTH_SHORT).show();
+                input_resultat.setText("");
 
                 Object[] calculationAndResult = generateRandomCalculation();
                 textView_calcul.setText((String) calculationAndResult[0]);
-                currentResult = (int) calculationAndResult[1];
+                currentResult = (float) calculationAndResult[1];
+
+
             }
 
             if (nombreVie == 1) {
@@ -85,11 +89,12 @@ public class GameActivity extends AppCompatActivity {
                 intent.putExtra("score", score);
                 startActivity(intent);
             }
+
         });
 
         Object[] calculationAndResult = generateRandomCalculation();
         textView_calcul.setText((String) calculationAndResult[0]);
-        currentResult = (int) calculationAndResult[1];
+        currentResult = (float) calculationAndResult[1];
     }
 
 
@@ -113,7 +118,7 @@ public class GameActivity extends AppCompatActivity {
         int number1 = random.nextInt(100);
         int number2 = random.nextInt(100);
         String operator;
-        int result;
+        float result;
         switch (random.nextInt(4)) {
             case 0:
                 operator = "+";
@@ -125,7 +130,7 @@ public class GameActivity extends AppCompatActivity {
                 break;
             case 2:
                 operator = "/";
-                result = number1 / number2;
+                result = (float) number1 / number2;
                 break;
             default:
                 operator = "*";

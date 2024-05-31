@@ -13,4 +13,5 @@
     <string name="text_perdu">Perdiste</string>
     <string name="text_enregistrement">Hasta pronto, ahorra : </string>
     <string name="text_apropos_title">Creado por :</string>
+    <string name="text_retour">Retour</string>
 </resources>

@@ -37,7 +37,8 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/text_reponse"
                 android:layout_gravity="center"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:inputType="numberSigned"/>
 
             <Button
                 android:id="@+id/bouton_envoyer"

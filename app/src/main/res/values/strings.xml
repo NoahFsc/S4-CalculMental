@@ -12,4 +12,5 @@
     <string name="text_perdu">Vous avez Perdu !</string>
     <string name="text_enregistrement">Veuillez vous enregistrer : </string>
     <string name="text_apropos_title">Créé par :</string>
+    <string name="text_retour">Retour</string>
 </resources>

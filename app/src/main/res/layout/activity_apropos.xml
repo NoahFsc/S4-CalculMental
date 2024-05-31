@@ -8,7 +8,7 @@
     tools:context=".AProposActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,13 +31,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/text_apropos_title" />
+            android:text="@string/text_apropos_title"
+            android:layout_gravity="center"
+            android:gravity="center"/>
 
         <TextView
             android:id="@+id/textView_user1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sara Terrier"
+            android:layout_marginTop="5dp"
             android:layout_gravity="center"
             android:gravity="center"/>
 
@@ -54,6 +57,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Mathéo Stevance"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/bouton_retour"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_retour"
+            android:layout_marginTop="20dp"
             android:layout_gravity="center"
             android:gravity="center"/>
 
