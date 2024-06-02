@@ -45,9 +45,7 @@ public class EnregistrementActivity extends AppCompatActivity {
                 return;
             }
 
-            Joueur joueur = new Joueur();
-            joueur.setNom(nom);
-            joueur.setScore(score);
+            Joueur joueur = new Joueur(nom, score);
 
             joueurDao.create(joueur);
             Intent intent = new Intent(this, MainActivity.class);

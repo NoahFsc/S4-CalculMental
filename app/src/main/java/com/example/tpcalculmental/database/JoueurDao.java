@@ -47,7 +47,7 @@ public class JoueurDao extends BaseDao<Joueur> {
     public List<Joueur> getAll() {
         List<Joueur> joueurs = new ArrayList<>();
         SQLiteDatabase db = helper.getReadableDatabase();
-        Cursor cursor = db.query(getTableName(), null, null, null, null, null, null);
+        Cursor cursor = db.query(getTableName(), null, null, null, null, null, score + " DESC");
         while (cursor.moveToNext()) {
             joueurs.add(getEntity(cursor));
         }
@@ -69,18 +69,14 @@ public class JoueurDao extends BaseDao<Joueur> {
     }
 
     public void insertJoueur(Joueur joueur) {
-        // Obtenez une instance de la base de données en mode écriture
         SQLiteDatabase db = helper.getWritableDatabase();
 
-        // Créez un nouvel ensemble de valeurs, où le nom de la colonne est la clé
         ContentValues values = new ContentValues();
         values.put(nom, joueur.getNom());
         values.put(score, joueur.getScore());
 
-        // Insérez la nouvelle ligne, en retournant l'ID de la ligne primaire de la nouvelle ligne
         long newRowId = db.insert(tableName, null, values);
 
-        // Fermez la base de données
         db.close();
     }
 
