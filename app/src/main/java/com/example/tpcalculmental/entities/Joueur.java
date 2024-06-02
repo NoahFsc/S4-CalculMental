@@ -4,6 +4,14 @@ public class Joueur extends BaseEntity {
     String nom;
     Integer score;
 
+    public Joueur() {
+    }
+
+    public Joueur(String nom, int score) {
+        this.nom = nom;
+        this.score = score;
+    }
+
     public String getNom() {
         return nom;
     }

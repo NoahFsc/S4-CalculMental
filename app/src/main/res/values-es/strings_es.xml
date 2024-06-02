@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Let that think In</string>
+    <string name="app_name">CálculoTorero</string>
     <string name="text_btn_jouer">Jugar</string>
     <string name="text_btn_scores">Punctuaciones</string>
     <string name="text_score">Puntaje</string>
@@ -14,4 +14,11 @@
     <string name="text_enregistrement">Hasta pronto, ahorra : </string>
     <string name="text_apropos_title">Creado por :</string>
     <string name="text_retour">Retour</string>
+    <string name="text_difficulte">Difficulté</string>
+    <string name="text_facile">Facile - 10 ♥</string>
+    <string name="text_moyen">Moyen - 5 ♥</string>
+    <string name="text_mortsubit">Mort Subite - 1 ♥</string>
+    <string name="text_explication_choix">Choisissez votre niveau de difficulté : </string>
+    <string name="text_score_title">Classement des Meilleurs Joueurs</string>
+    <string name="text_titre_nom">Nom du Joueur</string>
 </resources>

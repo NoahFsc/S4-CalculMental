@@ -26,8 +26,8 @@ public class GameActivity extends AppCompatActivity {
     private Button bouton_envoyer;
     private float currentResult;
     private int score = 0;
-
-    private int nombreVie = 5;
+    private int nombreVie = 0;
+    private String difficulty;
 
     private Menu menu;
 
@@ -46,8 +46,23 @@ public class GameActivity extends AppCompatActivity {
         input_resultat = findViewById(R.id.input_resultat);
         bouton_envoyer = findViewById(R.id.bouton_envoyer);
 
+        difficulty = getIntent().getStringExtra("difficulty");
+        if(difficulty.equals("facile")) {
+            nombreVie = 10;
+        } else if (difficulty.equals("moyen")) {
+            nombreVie = 5;
+        } else {
+            nombreVie = 1;
+        }
+
         bouton_envoyer.setOnClickListener(view->{
             String donneeInserer = input_resultat.getText().toString();
+
+            if (donneeInserer.isEmpty()) {
+                Toast.makeText(this, "Veuillez entrer une valeur", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
             float resultat = Float.parseFloat(donneeInserer);
 
             if (resultat == currentResult) {
@@ -106,8 +121,17 @@ public class GameActivity extends AppCompatActivity {
         MenuItem textscore = menu.findItem(R.id.text_score);
         MenuItem nombrevie = menu.findItem(R.id.nombre_vie);
 
+        difficulty = getIntent().getStringExtra("difficulty");
+        if(difficulty.equals("facile")) {
+            nombreVie = 10;
+        } else if (difficulty.equals("moyen")) {
+            nombreVie = 5;
+        } else {
+            nombreVie = 1;
+        }
+
         textscore.setTitle("Score: 0");
-        nombrevie.setTitle("Vie: 5");
+        nombrevie.setTitle("Vie: " + nombreVie);
 
         this.menu = menu;
         return super.onCreateOptionsMenu(menu);

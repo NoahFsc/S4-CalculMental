@@ -67,7 +67,8 @@
             android:text="@string/text_retour"
             android:layout_marginTop="20dp"
             android:layout_gravity="center"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:backgroundTint="#C60C30"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

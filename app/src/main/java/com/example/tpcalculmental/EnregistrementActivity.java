@@ -3,6 +3,7 @@ package com.example.tpcalculmental;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,7 +21,7 @@ public class EnregistrementActivity extends AppCompatActivity {
 
     private TextInputEditText input_nom;
     private Button bouton_envoyer_donnees;
-    private int score; // Assurez-vous que le score est mis à jour correctement dans votre activité
+    private int score;
     private JoueurDao joueurDao;
 
     @Override
@@ -36,7 +37,13 @@ public class EnregistrementActivity extends AppCompatActivity {
         joueurDao = new JoueurDao(new JoueurBaseHelper(this,"db",1));
 
         bouton_envoyer_donnees.setOnClickListener(view -> {
+
             String nom = input_nom.getText().toString();
+
+            if (nom.isEmpty()) {
+                Toast.makeText(this, "Veuillez entrer un nom", Toast.LENGTH_SHORT).show();
+                return;
+            }
 
             Joueur joueur = new Joueur();
             joueur.setNom(nom);
