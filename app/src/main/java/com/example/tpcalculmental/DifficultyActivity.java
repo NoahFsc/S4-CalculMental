@@ -31,7 +31,7 @@ public class DifficultyActivity extends AppCompatActivity {
 
         bouton_facile.setOnClickListener(view -> {
             Intent intent = new Intent(this, GameActivity.class);
-            difficulty = "facile";
+            difficulty = "Facile";
             intent.putExtra("difficulty", difficulty);
             startActivity(intent);
         });
@@ -40,7 +40,7 @@ public class DifficultyActivity extends AppCompatActivity {
 
         bouton_moyen.setOnClickListener(view -> {
             Intent intent = new Intent(this, GameActivity.class);
-            difficulty = "moyen";
+            difficulty = "Moyen";
             intent.putExtra("difficulty", difficulty);
             startActivity(intent);
         });
@@ -49,7 +49,7 @@ public class DifficultyActivity extends AppCompatActivity {
 
         bouton_mortsubit.setOnClickListener(view -> {
             Intent intent = new Intent(this, GameActivity.class);
-            difficulty = "difficile";
+            difficulty = "Difficile";
             intent.putExtra("difficulty", difficulty);
             startActivity(intent);
         });

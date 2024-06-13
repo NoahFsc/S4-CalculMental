@@ -22,6 +22,7 @@ public class EnregistrementActivity extends AppCompatActivity {
     private TextInputEditText input_nom;
     private Button bouton_envoyer_donnees;
     private int score;
+    private String difficulty = "";
     private JoueurDao joueurDao;
 
     @Override
@@ -34,6 +35,8 @@ public class EnregistrementActivity extends AppCompatActivity {
 
         score = getIntent().getIntExtra("score", 0);
 
+        difficulty = getIntent().getStringExtra("difficulty");
+
         joueurDao = new JoueurDao(new JoueurBaseHelper(this,"db",1));
 
         bouton_envoyer_donnees.setOnClickListener(view -> {
@@ -41,11 +44,11 @@ public class EnregistrementActivity extends AppCompatActivity {
             String nom = input_nom.getText().toString();
 
             if (nom.isEmpty()) {
-                Toast.makeText(this, "Veuillez entrer un nom", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getResources().getString(R.string.entrer_nom), Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            Joueur joueur = new Joueur(nom, score);
+            Joueur joueur = new Joueur(nom, score, difficulty);
 
             joueurDao.create(joueur);
             Intent intent = new Intent(this, MainActivity.class);

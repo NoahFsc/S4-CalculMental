@@ -27,38 +27,144 @@
             android:gravity="center"/>
 
         <TextView
-            android:id="@+id/textView_description"
+            android:id="@+id/textView_titre_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="@string/text_titre_description"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/textView_description_partie1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
-            android:text="@string/text_apropos_title"
-            android:layout_gravity="center"
-            android:gravity="center"/>
+            android:layout_marginEnd="16dp"
+            android:justificationMode="inter_word"
+            android:text="@string/text_description_partie1" />
 
         <TextView
-            android:id="@+id/textView_user1"
+            android:id="@+id/textView_description_partie2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sara Terrier"
-            android:layout_marginTop="5dp"
-            android:layout_gravity="center"
-            android:gravity="center"/>
+            android:text="@string/text_description_partie2"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:justificationMode="inter_word"/>
 
         <TextView
-            android:id="@+id/textView_user2"
+            android:id="@+id/textView_description_partie3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Noah Faisca"
-            android:layout_gravity="center"
-            android:gravity="center"/>
+            android:text="@string/text_description_partie3"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:justificationMode="inter_word"/>
 
         <TextView
-            android:id="@+id/textView_user3"
+            android:id="@+id/textView_fin_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mathéo Stevance"
+            android:text="@string/text_fin_description"
+            android:layout_marginTop="10dp"
             android:layout_gravity="center"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textView_creer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/text_apropos_creer" />
+
+        <LinearLayout
+            android:id="@+id/titre_createurs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/creator1_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/textView_user1_firstname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prenom_createur1" />
+
+                <TextView
+                    android:id="@+id/textView_user1_lastname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nom_createur1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:id="@+id/creator2_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/textView_user2_firstname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prenom_createur2" />
+
+                <TextView
+                    android:id="@+id/textView_user2_lastname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nom_createur2" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:id="@+id/creator3_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/textView_user3_firstname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prenom_createur3" />
+
+                <TextView
+                    android:id="@+id/textView_user3_lastname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nom_createur3" />
+            </LinearLayout>
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/bouton_retour"

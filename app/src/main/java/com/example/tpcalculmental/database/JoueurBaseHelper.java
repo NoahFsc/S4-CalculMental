@@ -12,7 +12,8 @@ public class JoueurBaseHelper extends DataBaseHelper{
         return "CREATE TABLE IF NOT EXISTS " + JoueurDao.tableName + " (" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 JoueurDao.nom + " VARCHAR(255) not null," +
-                JoueurDao.score + " INTEGER NOT NULL" +
+                JoueurDao.score + " INTEGER NOT NULL," +
+                JoueurDao.typeDifficulte + " VARCHAR(255) not null" +
                 ")";
     }
 

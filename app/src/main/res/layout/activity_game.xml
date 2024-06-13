@@ -20,7 +20,6 @@
             android:id="@+id/textView_calcul"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_gravity="center"

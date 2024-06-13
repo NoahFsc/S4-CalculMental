@@ -2,16 +2,27 @@
     <string name="app_name">CálculoTorero</string>
     <string name="text_btn_jouer">Jouer</string>
     <string name="text_btn_scores">Scores</string>
-    <string name="text_btn_apropos">À Propos</string>
     <string name="text_score">Score</string>
+    <string name="text_vie">Vie</string>
     <string name="text_nombre_vie">Nombre de vies</string>
     <string name="text_reponse">Votre réponse</string>
     <string name="text_envoyer">Envoyer</string>
     <string name="text_pseudo">Votre pseudonyme</string>
-    <string name="text_apropos">A PROPOS</string>
+    <string name="text_apropos">A Propos</string>
     <string name="text_perdu">Vous avez Perdu !</string>
     <string name="text_enregistrement">Veuillez vous enregistrer : </string>
-    <string name="text_apropos_title">Créé par :</string>
+    <string name="text_apropos_creer">Application créé par :</string>
+    <string name="text_titre_description">Bienvenue dans CálculoTorero !</string>
+    <string name="text_description_partie1">
+        Découvrez notre jeu de Calcul Mental immersif en plein cœur de l\'Espagne !
+    </string>
+    <string name="text_description_partie2">
+        Voyagez à travers des décors et une musique envoûtante, tout en testant vos compétences en calcul mental.
+    </string>
+    <string name="text_description_partie3">
+        Choisissez votre niveau de difficulté, enregistrez vos scores et comparez avec celles des autres joueurs !
+    </string>
+    <string name="text_fin_description">Bonne chance et amusez-vous bien !</string>
     <string name="text_retour">Retour</string>
     <string name="text_difficulte">Difficulté</string>
     <string name="text_facile">Facile - 10 ♥</string>
@@ -19,5 +30,24 @@
     <string name="text_mortsubit">Mort Subite - 1 ♥</string>
     <string name="text_explication_choix">Choisissez votre niveau de difficulté : </string>
     <string name="text_score_title">Classement des Meilleurs Joueurs</string>
-    <string name="text_titre_nom">Nom du Joueur</string>
+    <string name="text_titre_nom">Joueur</string>
+    <string name="text_titre_filtre">Filtrer</string>
+    <string name="choix_difficulte">Choisissez une difficulté</string>
+    <string-array name="difficulties">
+        <item>Tous</item>
+        <item>Facile</item>
+        <item>Moyen</item>
+        <item>Difficile</item>
+    </string-array>
+    <string name="entrer_nom">Veuillez entrer un nom</string>
+    <string name="entrer_valeur">Veuillez entrer une valeur</string>
+    <string name="correct">Correct</string>
+    <string name="incorrect">Incorrect</string>
+    <string name="danger">Attention il ne vous reste qu\'une vie</string>
+    <string name="prenom_createur1">Sara</string>
+    <string name="nom_createur1">Terrier</string>
+    <string name="prenom_createur2">Noah</string>
+    <string name="nom_createur2">Faisca</string>
+    <string name="prenom_createur3">Mathéo</string>
+    <string name="nom_createur3">Stevance</string>
 </resources>

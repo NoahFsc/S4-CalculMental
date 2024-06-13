@@ -4,12 +4,24 @@ public class Joueur extends BaseEntity {
     String nom;
     Integer score;
 
+    String typeDifficulte;
+
     public Joueur() {
     }
 
-    public Joueur(String nom, int score) {
+    public Joueur(String nom, int score, String typeDifficulte) {
         this.nom = nom;
         this.score = score;
+        this.typeDifficulte = typeDifficulte;
+
+    }
+
+    public String getTypeDifficulte() {
+        return typeDifficulte;
+    }
+
+    public void setTypeDifficulte(String typeDifficulte) {
+        this.typeDifficulte = typeDifficulte;
     }
 
     public String getNom() {

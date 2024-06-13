@@ -47,9 +47,10 @@ public class GameActivity extends AppCompatActivity {
         bouton_envoyer = findViewById(R.id.bouton_envoyer);
 
         difficulty = getIntent().getStringExtra("difficulty");
-        if(difficulty.equals("facile")) {
+
+        if(difficulty.equals("Facile")) {
             nombreVie = 10;
-        } else if (difficulty.equals("moyen")) {
+        } else if (difficulty.equals("Moyen")) {
             nombreVie = 5;
         } else {
             nombreVie = 1;
@@ -59,7 +60,7 @@ public class GameActivity extends AppCompatActivity {
             String donneeInserer = input_resultat.getText().toString();
 
             if (donneeInserer.isEmpty()) {
-                Toast.makeText(this, "Veuillez entrer une valeur", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getResources().getString(R.string.entrer_valeur), Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -69,9 +70,9 @@ public class GameActivity extends AppCompatActivity {
                 score++;
                 if (menu != null) {
                     MenuItem textscore = menu.findItem(R.id.text_score);
-                    textscore.setTitle("Score: " + score);
+                    textscore.setTitle(getResources().getString(R.string.text_score) + ": " + score);
                 }
-                Toast.makeText(this, "Correct", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getResources().getString(R.string.correct), Toast.LENGTH_SHORT).show();
                 input_resultat.setText("");
 
                 Object[] calculationAndResult = generateRandomCalculation();
@@ -82,10 +83,10 @@ public class GameActivity extends AppCompatActivity {
             }else{
                 if (menu != null) {
                     MenuItem nombrevie = menu.findItem(R.id.nombre_vie);
-                    nombrevie.setTitle("Vie: " + --nombreVie);
+                    nombrevie.setTitle(getResources().getString(R.string.text_vie) + ": " + --nombreVie);
 
                 }
-                Toast.makeText(this, "Incorrect", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getResources().getString(R.string.incorrect), Toast.LENGTH_SHORT).show();
                 input_resultat.setText("");
 
                 Object[] calculationAndResult = generateRandomCalculation();
@@ -96,12 +97,14 @@ public class GameActivity extends AppCompatActivity {
             }
 
             if (nombreVie == 1) {
-                Toast.makeText(this, "Attention il ne vous reste qu'une vie", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getResources().getString(R.string.danger), Toast.LENGTH_SHORT).show();
             }
 
             if (nombreVie == 0) {
                 Intent intent = new Intent(this, EnregistrementActivity.class);
                 intent.putExtra("score", score);
+                intent.putExtra("difficulty", difficulty);
+
                 startActivity(intent);
             }
 
@@ -122,16 +125,16 @@ public class GameActivity extends AppCompatActivity {
         MenuItem nombrevie = menu.findItem(R.id.nombre_vie);
 
         difficulty = getIntent().getStringExtra("difficulty");
-        if(difficulty.equals("facile")) {
+        if(difficulty.equals("Facile")) {
             nombreVie = 10;
-        } else if (difficulty.equals("moyen")) {
+        } else if (difficulty.equals("Moyen")) {
             nombreVie = 5;
         } else {
             nombreVie = 1;
         }
 
-        textscore.setTitle("Score: 0");
-        nombrevie.setTitle("Vie: " + nombreVie);
+        textscore.setTitle(getResources().getString(R.string.text_score) + ": " + score);
+        nombrevie.setTitle(getResources().getString(R.string.text_vie) + ": " + nombreVie);
 
         this.menu = menu;
         return super.onCreateOptionsMenu(menu);

@@ -4,21 +4,51 @@
     <string name="text_btn_jouer">Jugar</string>
     <string name="text_btn_scores">Punctuaciones</string>
     <string name="text_score">Puntaje</string>
+    <string name="text_vie">Vida</string>
     <string name="text_nombre_vie">Nombre de vidas</string>
     <string name="text_reponse">Su respuesta</string>
     <string name="text_envoyer">Enviar a</string>
     <string name="text_pseudo">Tu seudonimo</string>
-    <string name="text_btn_apropos">A Proposito</string>
-    <string name="text_apropos">A PROPOSITO</string>
+    <string name="text_apropos">A Proposito</string>
     <string name="text_perdu">Perdiste</string>
     <string name="text_enregistrement">Hasta pronto, ahorra : </string>
-    <string name="text_apropos_title">Creado por :</string>
-    <string name="text_retour">Retour</string>
-    <string name="text_difficulte">Difficulté</string>
-    <string name="text_facile">Facile - 10 ♥</string>
-    <string name="text_moyen">Moyen - 5 ♥</string>
-    <string name="text_mortsubit">Mort Subite - 1 ♥</string>
-    <string name="text_explication_choix">Choisissez votre niveau de difficulté : </string>
-    <string name="text_score_title">Classement des Meilleurs Joueurs</string>
-    <string name="text_titre_nom">Nom du Joueur</string>
+    <string name="text_apropos_creer">Aplicación creado por :</string>
+    <string name="text_titre_description">¡Bienvenidos a CálculoTorero!</string>
+    <string name="text_description_partie1">
+        ¡Descubre nuestro inmersivo juego de aritmética mental en el corazón de España!
+    </string>
+    <string name="text_description_partie2">
+        Viaja por escenarios y déjate llevar por una música cautivadora, mientras pones a prueba tus habilidades de cálculo mental.
+    </string>
+    <string name="text_description_partie3">
+        ¡Elige tu nivel de dificultad, registra tus puntuaciones y compara tu rendimiento con el de otros jugadores!
+    </string>
+    <string name="text_fin_description">Buena suerte y diviértete!</string>
+    <string name="text_retour">Atrás</string>
+    <string name="text_difficulte">Dificultad</string>
+    <string name="text_facile">Fácil - 10 ♥</string>
+    <string name="text_moyen">Promedio - 5 ♥</string>
+    <string name="text_mortsubit">Muerte súbita - 1 ♥</string>
+    <string name="text_explication_choix">Elige tu nivel de dificultad : </string>
+    <string name="text_score_title">Ranking de los mejores jugadores</string>
+    <string name="text_titre_nom">Jugador</string>
+    <string name="text_titre_filtre">Filtrar</string>
+    <string name="choix_difficulte">Elija una dificultad</string>
+    <string-array name="difficulties">
+        <item>Todo</item>
+        <item>Fácil</item>
+        <item>Medio</item>
+        <item>Difícil</item>
+    </string-array>
+    <string name="entrer_nom">Por favor, introduzca un nombre</string>
+    <string name="entrer_valeur">Por favor, introduzca un valor</string>
+    <string name="correct">Correcto</string>
+    <string name="incorrect">Incorrecto</string>
+    <string name="danger">Ten cuidado, solo te queda una vida.</string>
+    <string name="prenom_createur1">Sara</string>
+    <string name="nom_createur1">Terrier</string>
+    <string name="prenom_createur2">Noah</string>
+    <string name="nom_createur2">Faisca</string>
+    <string name="prenom_createur3">Mathéo</string>
+    <string name="nom_createur3">Stevance</string>
 </resources>

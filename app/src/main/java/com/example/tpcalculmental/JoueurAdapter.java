@@ -31,6 +31,7 @@ public class JoueurAdapter extends RecyclerView.Adapter<JoueurAdapter.JoueurView
         Joueur joueur = joueurs.get(position);
         holder.nom.setText(joueur.getNom());
         holder.score.setText(String.valueOf(joueur.getScore()));
+        holder.difficulte.setText(joueur.getTypeDifficulte());
     }
 
     @Override
@@ -41,11 +42,13 @@ public class JoueurAdapter extends RecyclerView.Adapter<JoueurAdapter.JoueurView
     public static class JoueurViewHolder extends RecyclerView.ViewHolder {
         public TextView nom;
         public TextView score;
+        public TextView difficulte;
 
         public JoueurViewHolder(@NonNull View itemView) {
             super(itemView);
             nom = itemView.findViewById(R.id.nomTextView);
             score = itemView.findViewById(R.id.scoreTextView);
+            difficulte = itemView.findViewById(R.id.difficulteTextView);
         }
     }
 }
