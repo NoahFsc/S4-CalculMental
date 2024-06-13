@@ -19,6 +19,8 @@ import com.example.tpcalculmental.database.JoueurDao;
 import com.example.tpcalculmental.entities.Joueur;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class ScoresActivity extends AppCompatActivity {
@@ -53,19 +55,53 @@ public class ScoresActivity extends AppCompatActivity {
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(ScoresActivity.this);
                 builder.setTitle(getResources().getString(R.string.choix_difficulte));
+
                 String[] difficulties = getResources().getStringArray(R.array.difficulties);
                 builder.setItems(difficulties, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         String selectedDifficulty = difficulties[which];
                         List<Joueur> filteredJoueurs = filterJoueursByDifficulty(joueurs, selectedDifficulty);
-                        JoueurAdapter joueurAdapter = new JoueurAdapter(filteredJoueurs);
-                        recyclerView.setAdapter(joueurAdapter);
+                        AlertDialog.Builder orderBuilder = new AlertDialog.Builder(ScoresActivity.this);
+                        orderBuilder.setTitle(getResources().getString(R.string.choix_ordre));
+
+                        String[] orders = getResources().getStringArray(R.array.ordres);
+                        orderBuilder.setItems(orders, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                String selectedOrder = orders[which];
+                                List<Joueur> orderedJoueurs = orderJoueurs(filteredJoueurs, selectedOrder);
+                                JoueurAdapter joueurAdapter = new JoueurAdapter(orderedJoueurs);
+                                recyclerView.setAdapter(joueurAdapter);
+                            }
+                        });
+
+                        orderBuilder.show();
                     }
                 });
+
                 builder.show();
             }
         });
+    }
+
+    private List<Joueur> orderJoueurs(List<Joueur> joueurs, String order) {
+        List<Joueur> orderedJoueurs = new ArrayList<>(joueurs);
+
+        if (order.equals("Croissant")) {
+            return joueurs;
+
+        } else if (order.equals("Décroissant")) {
+               Collections.sort(orderedJoueurs, new Comparator<Joueur>() {
+                    @Override
+                    public int compare(Joueur o1, Joueur o2) {
+                        return o1.getScore() - o2.getScore();
+                    }
+                });
+
+        }
+
+        return orderedJoueurs;
     }
 
     private List<Joueur> filterJoueursByDifficulty(List<Joueur> joueurs, String difficulty) {

@@ -66,7 +66,7 @@ public class JoueurDao extends BaseDao<Joueur> {
         Faker faker = new Faker();
 
         for (int i = 0; i < numberOfPlayers; i++) {
-            String fakeName = faker.name().fullName();
+            String fakeName = faker.name().firstName();
             int fakeScore = faker.number().numberBetween(1, 100);
 
             String[] difficulties = {"Facile", "Moyen", "Difficile"};

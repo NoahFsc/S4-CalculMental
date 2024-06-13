@@ -48,6 +48,11 @@ public class EnregistrementActivity extends AppCompatActivity {
                 return;
             }
 
+            if (nom.length() > 10) {
+                Toast.makeText(this, getResources().getString(R.string.erreur_pseudo), Toast.LENGTH_SHORT).show();
+                return;
+            }
+
             Joueur joueur = new Joueur(nom, score, difficulty);
 
             joueurDao.create(joueur);

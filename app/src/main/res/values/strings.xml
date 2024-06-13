@@ -8,6 +8,7 @@
     <string name="text_reponse">Votre réponse</string>
     <string name="text_envoyer">Envoyer</string>
     <string name="text_pseudo">Votre pseudonyme</string>
+    <string name="erreur_pseudo">Le nom ne peut pas dépasser 10 caractères</string>
     <string name="text_apropos">A Propos</string>
     <string name="text_perdu">Vous avez Perdu !</string>
     <string name="text_enregistrement">Veuillez vous enregistrer : </string>
@@ -38,6 +39,11 @@
         <item>Facile</item>
         <item>Moyen</item>
         <item>Difficile</item>
+    </string-array>
+    <string name="choix_ordre">Choisissez un ordre</string>
+    <string-array name="ordres">
+        <item>Croissant</item>
+        <item>Décroissant</item>
     </string-array>
     <string name="entrer_nom">Veuillez entrer un nom</string>
     <string name="entrer_valeur">Veuillez entrer une valeur</string>

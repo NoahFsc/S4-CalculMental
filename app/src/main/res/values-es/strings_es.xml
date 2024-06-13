@@ -9,6 +9,7 @@
     <string name="text_reponse">Su respuesta</string>
     <string name="text_envoyer">Enviar a</string>
     <string name="text_pseudo">Tu seudonimo</string>
+    <string name="erreur_pseudo">Le nom ne peut pas dépasser 10 caractères</string>
     <string name="text_apropos">A Proposito</string>
     <string name="text_perdu">Perdiste</string>
     <string name="text_enregistrement">Hasta pronto, ahorra : </string>
@@ -39,6 +40,11 @@
         <item>Fácil</item>
         <item>Medio</item>
         <item>Difícil</item>
+    </string-array>
+    <string name="choix_ordre">Elige un pedido</string>
+    <string-array name="ordres">
+        <item>Cuerno</item>
+        <item>Descendente</item>
     </string-array>
     <string name="entrer_nom">Por favor, introduzca un nombre</string>
     <string name="entrer_valeur">Por favor, introduzca un valor</string>
