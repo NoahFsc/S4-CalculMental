@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/four"
     tools:context=".EnregistrementActivity">
 
     <LinearLayout
@@ -18,22 +19,26 @@
 
         <TextView
             android:id="@+id/textView_perdu"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_edittext"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
             android:text="@string/text_perdu"
             android:textSize="30sp"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:gravity="center"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView_textenregistrement"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/text_enregistrement"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_edittext"
             android:gravity="center"
-            android:layout_marginTop="10dp"/>
+            android:paddingHorizontal="10dp"
+            android:text="@string/text_enregistrement" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -45,6 +50,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/text_pseudo"
+                android:background="@drawable/rounded_edittext"
                 android:layout_gravity="center"
                 android:gravity="center"/>
 

@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/three"
     tools:context=".GameActivity">
 
     <LinearLayout
@@ -18,12 +19,14 @@
 
         <TextView
             android:id="@+id/textView_calcul"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textStyle="bold"
             android:layout_gravity="center"
-            android:gravity="center"/>
+            android:background="@drawable/rounded_edittext"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:paddingHorizontal="10dp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -37,7 +40,8 @@
                 android:hint="@string/text_reponse"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:inputType="numberSigned"/>
+                android:inputType="numberSigned"
+                android:background="@drawable/rounded_edittext"/>
 
             <Button
                 android:id="@+id/bouton_envoyer"

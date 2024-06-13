@@ -12,7 +12,7 @@
     <string name="text_apropos">A Propos</string>
     <string name="text_perdu">Vous avez Perdu !</string>
     <string name="text_enregistrement">Veuillez vous enregistrer : </string>
-    <string name="text_apropos_creer">Application créé par :</string>
+    <string name="text_apropos_creer">Application créée par :</string>
     <string name="text_titre_description">Bienvenue dans CálculoTorero !</string>
     <string name="text_description_partie1">
         Découvrez notre jeu de Calcul Mental immersif en plein cœur de l\'Espagne !
@@ -21,7 +21,7 @@
         Voyagez à travers des décors et une musique envoûtante, tout en testant vos compétences en calcul mental.
     </string>
     <string name="text_description_partie3">
-        Choisissez votre niveau de difficulté, enregistrez vos scores et comparez avec celles des autres joueurs !
+        Choisissez votre niveau de difficulté, enregistrez vos scores et comparez avec ceux des autres joueurs ! En Difficile, vous aurez des divisions :)
     </string>
     <string name="text_fin_description">Bonne chance et amusez-vous bien !</string>
     <string name="text_retour">Retour</string>

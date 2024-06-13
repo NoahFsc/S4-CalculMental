@@ -146,7 +146,13 @@ public class GameActivity extends AppCompatActivity {
         int number2 = random.nextInt(100);
         String operator;
         float result;
-        switch (random.nextInt(4)) {
+        int operatorChoice;
+        if (difficulty.equals("Facile") || difficulty.equals("Moyen")) {
+            operatorChoice = random.nextInt(3); // Choix entre 0, 1 et 2
+        } else {
+            operatorChoice = random.nextInt(4); // Choix entre 0, 1, 2 et 3
+        }
+        switch (operatorChoice) {
             case 0:
                 operator = "+";
                 result = number1 + number2;
@@ -156,12 +162,12 @@ public class GameActivity extends AppCompatActivity {
                 result = number1 - number2;
                 break;
             case 2:
-                operator = "/";
-                result = (float) number1 / number2;
-                break;
-            default:
                 operator = "*";
                 result = number1 * number2;
+                break;
+            default:
+                operator = "/";
+                result = (float) number1 / number2;
                 break;
         }
         return new Object[]{number1 + " " + operator + " " + number2, result};
